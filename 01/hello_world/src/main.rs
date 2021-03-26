@@ -1,4 +1,3 @@
-
 fn main() {
     let apples = 10;
     let answer = (6 / 2 + 4) * 3;
