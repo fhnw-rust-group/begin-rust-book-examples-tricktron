@@ -4,5 +4,6 @@ members = [
     "02/chapter2",
     "03/chapter3",
     "04/chapter4",
-    "05/chapter5"
+    "05/chapter5",
+    "07/chapter7"
 ]
