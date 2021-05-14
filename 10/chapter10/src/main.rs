@@ -42,7 +42,11 @@ fn main() {
     hello += "world!";
     println!("{}", hello);
 
-    let test_name = "Michael".to_owned();
+    let mut test_name = "üichael".to_owned();
+    // test_name[0] = '\u{0065}'; // doesn't work because "index" trait is missing
+    test_name.replace_range(0..2, "T"); // works because ü is 2 characters in UTF8
+    //test_name.replace_range(0..1, "T"); // panicks because ü is 2 characters in UTF8
+    println!("{}", test_name);
     say_hi(&test_name);
     say_hi(&test_name);
     say_hi(first_name);
