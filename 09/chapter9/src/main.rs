@@ -60,6 +60,7 @@ mod tests {
     #[test]
     fn exercise1() {
         assert_eq!(concat_length("Hello", "World"), 10);
+        assert_eq!(concat_length("Grüezi", "Wohl"), 10);
     }
 
     #[test]
@@ -69,5 +70,6 @@ mod tests {
 }
 
 fn concat_length(s1: &str, s2: &str) -> usize {
-    s1.len() + s2.len()
+    // s1.len() + s2.len() doesn't work because it returns length in bytes, not characters
+    s1.chars().count() + s2.chars().count()
 }
